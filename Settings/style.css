@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(12, 12, 12);
+}
+
+.setting__inner {
+    width: 350px;
+    display: flex;
+    border-radius: 20px;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    color: white;
+    background-color: rgb(26, 26, 26);
+    box-shadow: 4px 4px 3px black, inset 2px 2px 3px  rgba(255, 255, 255, 0.274);
+    
+}
+
+.setting__item {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px;
+    margin-bottom:20px;
+    cursor: pointer;
+    box-shadow: 4px 4px 3px black, inset 1px 1px 3px  rgba(255, 255, 255, 0.274);
+    transition: .3s;
+}
+
+
+
+
+.actived {
+    box-shadow: inset 1px 1px 2px rgba(255, 255, 255, 0.089), inset -4px -4px 4px black ;
+    color:rgb(250, 246, 0);
+    background-color: rgb(19, 19, 19);
+}
