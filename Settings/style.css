@@ -18,7 +18,7 @@ body {
     border-radius: 20px;
     flex-wrap: wrap;
     padding-top: 20px;
-    color: white;
+    color: rgb(78, 78, 78);
     background-color: rgb(26, 26, 26);
     box-shadow: 4px 4px 3px black, inset 2px 2px 3px  rgba(255, 255, 255, 0.274);
     
