@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    overflow: hidden;
+}
+
+.nav {
+    font-family: 'Fira Sans', sans-serif;
+    background-color: rgb(224, 224, 224);
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    position: absolute;
+    right: 0;
+    min-height: 100vh;
+    top: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+ul {
+    list-style: none;
+}
+
+.nav__link {
+    font-weight: 400;
+    font-size:24px;
+    text-decoration: none;
+    color: #45484d;
+    padding: 15px 30px;
+    display: block
+};
+
+.nav__item {
+    list-style: none;
+    transition: background-color .3s linear;
+}
+
+.nav__item:hover {
+    background-color: rgb(218, 218, 218);
+}
+
+
+.nav__title {
+    color: #919191;
+}
+
+
+
+
+.nav__header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.nav__close {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border:1px solid black; 
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 1s ease;
+}
+
+.nav__close:hover {
+    transform: rotate(360deg);
+    color: coral;
+    border-color: coral;
+}
+
+.nav__close i {
+    font-size: 30px;
+}
+
+.disabled {
+    right: -400px;
+}
+
+.btn_menu   {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px;
+    width: 100px;
+    cursor: pointer;
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 10px;
+}
+.burger span {
+    font-size: 24px;
+}
+
+.burger {
+    width: 30px;
+    height: 20px;
+    position: relative;
+    
+}
+
+.burger_line {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.burger:before, .burger::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+}
+
+.burger:before {
+    top: 0;
+}
+.burger::after {
+    bottom: 0;
+}
+
+header  {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
