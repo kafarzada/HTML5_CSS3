@@ -49,6 +49,12 @@ header {
     text-decoration: none;
     display: block;
     padding: 0.4em;
+    transition: all .3s;
+}
+
+section {
+    font-family: 'Nanum Gothic', sans-serif;
+    letter-spacing: 2px;
 }
 
 .nav__itemLink:hover {
@@ -79,6 +85,7 @@ header {
     text-align: center;
     padding: 0.7em;
     margin-bottom: 0.6em;
+    letter-spacing: 3px;
 }
 
 .bg_2 {
@@ -108,6 +115,7 @@ header {
     background-color: rgb(27, 27, 27);
 }
 .footer__author {
+    font-family: 'Nanum Gothic', sans-serif;
     font-size: 15px;
     margin: 10px;
     color: rgb(83, 83, 83);
@@ -121,7 +129,7 @@ header {
     right: 0;
     background-color: rgba(0, 0, 0, 0.733);
     padding: 0.2em  1em;
-    font-size: 15px;
+    
 }
 
 .header__inner.fixed img {
