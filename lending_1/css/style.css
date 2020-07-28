@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    font-size: 20px;
+}
+
+header {
+   color: white;
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   
+}
+
+.header__inner {
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-between;
+    padding: 0.4em  1.5em;
+    align-items: center;
+    transition: all 0.4s;
+}
+
+.logo__img {
+    width: 50px;
+    height: 50px;
+}
+
+.nav__item {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+.nav__item {
+    margin-left: 20px;
+    
+}
+
+.nav__itemLink {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 0.4em;
+}
+
+.nav__itemLink:hover {
+    background-color: rgb(255, 143, 69);
+}
+
+.nav__itemLink.active {
+    background-color: rgb(255, 143, 69);
+}
+
+.bg_1 {
+    background-image: url(../img/1.jpg);
+    min-height: 100vh;
+    width: 100%;
+    background-repeat: none;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.section {
+    padding: 2em 3em;
+    text-align: center;
+    line-height: 30px;
+}
+
+.section h1 {
+    text-align: center;
+    padding: 0.7em;
+    margin-bottom: 0.6em;
+}
+
+.bg_2 {
+    background-image: url(../img/2.jpg);
+    min-height: 100vh;
+    width: 100%;
+    background-repeat: none;
+    background-size: cover;
+    background-position: center;
+}
+
+.bg_3 {
+    background-image: url(../img/3.jpg);
+    min-height: 100vh;
+    width: 100%;
+    background-repeat: none;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.footer {
+    padding: 2em 2.5em;
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    background-color: rgb(27, 27, 27);
+}
+.footer__author {
+    font-size: 15px;
+    margin: 10px;
+    color: rgb(83, 83, 83);
+    letter-spacing: 5px;
+}
+
+.header__inner.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.733);
+    padding: 0.2em  1em;
+    font-size: 15px;
+}
+
+.header__inner.fixed img {
+    width: 40px;
+    height: 40px;
+}
