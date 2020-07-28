@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body id="body">
+    
+
+    <script>
+
+        class Star {
+            constructor(options) {
+                this.el = document.getElementById(options.selector);
+                this.size = Math.round (Math.random() * 5) + 1
+                this.postionX  =   Math.round( Math.random() * this.el.clientWidth)
+                this.postionY  =   Math.round( Math.random() * this.el.clientHeight)
+                this.star = document.createElement('span')
+                this.setStyle()
+            }
+
+            setStyle() {
+                this.star.classList.add('star')
+                this.star.style.backgroundColor =`rgba(255, 255, 255, ${Math.random()})`
+                this.star.style.width = this.size + 'px';
+                this.star.style.height = this.size + 'px';
+                this.star.style.left =  this.postionX + 'px';
+                this.star.style.top =  this.postionY + 'px';
+            }
+
+            render() {
+                this.el.append(this.star);
+                return this
+            }
+
+            hide() {
+                this.star.style.display= 'none'
+                return this
+            }
+
+            show() {
+                this.star.style.display= 'block'
+                return this
+            }
+        }
+
+        let arr = []
+        
+        for (let index = 0; index < 400; index++) {
+                arr.push(new Star({ selector: 'body'
+                         }).render())
+        }
+        
+    </script>
+</body>
+</html>

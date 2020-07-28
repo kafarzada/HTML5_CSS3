@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color: rgb(9, 9, 26);
+    position: relative;
+    overflow: hidden;
+}
+
+.star {
+    display: block;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.52);
+    position: absolute;
+}
