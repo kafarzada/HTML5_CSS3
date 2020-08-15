@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(21, 22, 32);
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 9;
+}
+
+.nav li {
+    list-style: none;
+}
+
+.nav li a {
+    display: block;
+    text-decoration: none;
+    font-family: 'Cabin';
+    font-size: 40px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 700;
+    color: snow;
+    margin: 5px;
+}
+
+.nav li a:after {
+    content: attr(data-text);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0, 0);
+    font-size: 90px;
+    
+    transition: 0.1s linear;
+    color: rgb(143, 143, 143);
+    z-index: -1;
+}
+
+.nav li:hover a:after {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1, 1);
+}
