@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header id="header"></header>
+    
+    <script>
+        const colors = [
+            "#D2B4DE",
+            '#A3E4D7',
+            '#F5CBA7',
+            '#F5CBA7'
+        ]
+        const haeder = document.querySelector('header');
+        const size = 50;
+        setInterval(() => {
+            const span = document.createElement('span');
+            span.classList.add('square')
+
+            span.style.width = size * Math.random() * 10;
+            span.style.height = size * Math.random() * 10;
+            span.style.top = Math.random() * haeder.offsetHeight + 'px'
+            span.style.left = Math.random() * haeder.offsetWidth + 'px'
+            span.style.borderColor = colors[Math.round(Math.random() * colors.length)];
+            haeder.appendChild(span)
+            setInterval(()=> {
+                span.remove()
+            }, 1500)
+
+        }, 50)
+
+    </script>
+</body>
+</html>
