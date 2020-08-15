@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+
+        <img class="slider" src="https://image.winudf.com/v2/image/Y29tLmNvZmZlZXdhbGxwYXBlci5oZC5jb2ZmZWVwaWN0dXJlcy5waG90b3MuYmFja2dyb3VuZC5jdXRlLmNvb2wuYXJ0LmNvZmZlZWltYWdlcy5oZC5mcmVlX3NjcmVlbl80XzE1MzM5NDQwOThfMDgx/screen-4.jpg?fakeurl=1&type=.jpg" alt="">
+
+        <div class="img__items">
+            <img  class="item" src="images/1.jpg" alt="">
+            <img class="item" src="images/2.jpg" alt="">
+            <img class="item" src="images/3.jpg" alt="">
+            <img class="item" src="images/4.jpg" alt="">
+        </div>
+    </section>
+
+    <script>
+        const items = document.querySelectorAll('.item');
+        const slider = document.querySelector('.slider')
+        console.dir(items);
+        items.forEach((item) => {
+            item.addEventListener('click', function() {
+
+                items.forEach(item => {
+                     item.classList.remove('active')
+                     item.classList.remove('animation')
+                })
+
+                slider.src = item.src
+                item.classList.add('active')
+                item.classList.add('animation')
+            })
+        })
+    </script>
+</body>
+</html>
