@@ -7,22 +7,21 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="block">
-        <div class="border"></div>
-    </div>
+    <header class="block">
+        <div class="overlay"></div>
+        <h1 class="title">this is parallax effect</h1>
+    </header>
+    <section>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non, eveniet quia? Voluptatibus autem cum dolore recusandae aliquam porro. Optio iusto nobis aperiam, voluptatem vitae, eum, architecto sunt eligendi porro ipsam nesciunt quos! Eos distinctio aspernatur inventore voluptate enim sit placeat tempora blanditiis nostrum non molestias officia fugit doloribus vero rem, iusto aut labore nobis cumque obcaecati, dolorum odio libero sint dolore. Error, neque! Reprehenderit voluptas perferendis consequuntur esse cum, dolor aliquam sunt porro, nesciunt odit eos sint eaque eligendi earum magnam maxime! Quisquam, pariatur rerum velit ut voluptate nam eaque perferendis quaerat aliquam, debitis iusto, deleniti quas eum. Ab officia obcaecati debitis deserunt dolorem, ducimus expedita, tempora sequi nisi praesentium cum qui pariatur consectetur dolor adipisci ea magni molestias architecto temporibus placeat itaque consequatur incidunt numquam quod! Architecto magnam iste aliquid quos sunt, corrupti obcaecati minima voluptatum necessitatibus illum perferendis, suscipit tenetur maxime vitae sequi quasi pariatur, vero eos. Sint inventore eveniet dignissimos cum voluptatem dolores deserunt sapiente aperiam architecto? Sunt distinctio dignissimos voluptatum optio culpa ipsum sequi eligendi expedita nam saepe hic id voluptate alias, adipisci officia dicta accusamus praesentium est! Totam consectetur saepe atque quod recusandae inventore ullam, nulla ducimus eum accusantium aliquam sed sint. Impedit, voluptate et?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium perspiciatis soluta, eveniet veritatis quas maiores dolor voluptatum, laboriosam omnis commodi rem facilis porro reiciendis dicta at tenetur nulla officiis? Porro consequatur minima maxime a corrupti temporibus, facere molestias optio aut aliquid neque mollitia suscipit, deleniti cum necessitatibus quasi sint quo quae consectetur eum nostrum exercitationem! Amet a est iste? Minima ab provident nihil sint temporibus itaque facere cum suscipit vitae. Illo facilis dolores voluptates veritatis ex, aspernatur omnis perferendis. Quod voluptates itaque in dolorem? Libero, voluptate minus rerum amet est aliquam, cupiditate sint possimus debitis tenetur at officiis sequi eaque quidem expedita molestias. Quod doloremque quo nemo tempore, error consequuntur esse nihil natus fugiat, enim dignissimos labore odit nesciunt molestias possimus? Velit, at facere mollitia dolorum odio dolor, quam assumenda, reiciendis nemo excepturi maiores. Est quam ullam maiores, illo sunt dolorem. Numquam aliquid earum fuga, commodi adipisci eum vel suscipit iste fugiat, minima vitae exercitationem quis iure voluptatibus omnis error consequuntur maiores nisi iusto, doloribus laboriosam quas necessitatibus nemo? Sit rerum suscipit quibusdam assumenda reiciendis error non nesciunt aperiam, nulla accusantium doloribus totam ab neque maxime doloremque, vitae fugit maiores, est labore quia? Repudiandae quasi officia nisi, quae nemo aliquam dicta accusamus atque? Facere eius dolore rerum quod amet animi consectetur cumque nihil atque totam! Accusantium aliquid itaque nulla provident sed illum laboriosam dolor odit in officia ratione, dolorem est aut molestiae id nesciunt. Autem, numquam iusto fugit quasi eius repudiandae iure sint tenetur soluta eum ex possimus nisi, reiciendis enim illo! Fugit rerum dignissimos porro eligendi cupiditate. Esse eligendi dolor aliquam inventore rerum itaque nobis minus quisquam corrupti necessitatibus, reiciendis quae nemo deserunt officia quam error, excepturi aperiam recusandae a, repellendus at est obcaecati fugiat? Quia non expedita ea pariatur asperiores ullam voluptatem, vel possimus explicabo harum quo vitae!</p>
+    </section>
 
     <script>
         
-        // document.querySelector('.block').onmousemove = function(e) {
-        //     const centerX = e.target.clientWidth / 2;
-        //     const centerY = e.target.clientHeight / 2;
-
-        //     const x = centerX - e.offsetX*2;
-        //     const y = centerY - e.offsetY*2;
-
-        //     document.querySelector('.block').style.transform =`translate(${x / 10}px, ${y/ 10}px)`;
-        //     document.querySelector('.border').style.transform =`translate(${-x / 10}px, ${-y/ 10}px)`;
-        // }
+        window.addEventListener('scroll', ()=> {
+            console.log(window.scrollY);
+            document.querySelector('.title').style.transform = `translateY(-${window.scrollY + 10}px)`
+        })
     </script>
 </body>
 </html>
