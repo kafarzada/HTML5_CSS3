@@ -17,10 +17,10 @@
     </section>
 
     <script>
-        
+        const title =  document.querySelector('.title');
         window.addEventListener('scroll', ()=> {
             console.log(window.scrollY);
-            document.querySelector('.title').style.transform = `translateY(-${window.scrollY + 10}px)`
+           title.style.transform = `translateY(-${window.scrollY + 10}px)`
         })
     </script>
 </body>

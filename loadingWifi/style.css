@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    min-height: 100vh;
+    background-color: rgb(19, 19, 19);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: rgb(15, 127, 255);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+}
+
+.loading {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+
+.circle {
+    width: calc(100% - 20%);
+    height: calc(100% - 20%);
+    border:none;
+    border-top: 4px solid rgb(15, 127, 255);
+    border-radius:50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.dot {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgb(15, 127, 255);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 110%);
+}
+
+
+.cr1 {
+    width: 180px;
+    height: 180px;
+    animation: a1 1s ease-in-out infinite;
+    -webkit-animation-direction: alternate-reverse;
+    /* animation-delay: 2.5s; */
+    
+}
+
+.cr2 {
+    width: 140px;
+    height: 140px;
+    animation: a1 1s ease-in-out infinite;
+    -webkit-animation-direction: alternate-reverse;
+    /* animation-delay: 2s; */
+}
+
+.cr3{
+    width: 100px;
+    height: 100px;
+    animation: a1 1s ease-in-out infinite;
+    -webkit-animation-direction: alternate-reverse;
+}
+
+.cr4 {
+    width: 60px;
+    height: 60px;
+    animation: a1 1s ease-in-out infinite;
+    -webkit-animation-direction: alternate-reverse;
+}
+
+@keyframes a1 {
+    0% {
+        transform: translate(-50%, -50%);
+    }
+
+    100% {
+        transform: translate(-50%, -60%) scaleY(1.2);
+    }
+
+
+}
+
+.searching {
+    text-shadow: 0px 0px 10px rgb(15, 127, 255);
+    animation: shadow 1s ease-in-out infinite;
+    -webkit-animation-direction: alternate-reverse;
+}
+
+@keyframes shadow {
+    0% {
+        text-shadow: 0px 0px 10px rgb(15, 127, 255);
+    }
+
+    100% {
+        text-shadow: 0px 0px 50px rgb(15, 127, 255);
+    }
+
+
+}
