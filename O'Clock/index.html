@@ -17,13 +17,22 @@
         <div class="sec">
             <div class="s"></div>
         </div>
+
+        <div class="day"></div>
     </div>
 
     <script>
         const sc = document.querySelector('.sec');
         const hr = document.querySelector('.hour');
         const mn = document.querySelector('.min');
+        const day = document.querySelector('.day');
         const deg = 6;
+
+        if(new Date().getDate() < 10) {
+            day.innerHTML ="0" + new Date().getDate()
+        } else {
+            day.innerHTML = new Date().getDate()
+        }
 
         setInterval(() => {
             const sdeg = new Date().getSeconds() * deg;
