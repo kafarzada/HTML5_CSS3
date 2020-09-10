@@ -1,0 +1,104 @@
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Kufam', cursive;
+    background-color: slategrey;
+}
+
+.calendar {
+    width: 320px;
+    position: relative;
+    border-radius: 10px;
+    z-index: 9;
+    box-shadow: 0 20px 20px -5px rgb(97, 97, 97),
+                0 25px 20px -5px rgb(97, 97, 97);
+}
+
+.paper {
+    width: inherit;
+    background-color: rgb(245, 245, 245);
+    border-radius: 10px;
+}
+
+.monthSecion, .daySection {
+    width: inherit;
+    text-align: center;
+    padding: 1.2em;
+}
+
+.monthSecion {
+    font-size: 40px;
+    background-color: rgb(255, 5, 5);
+    color: white;
+    font-weight: 600;
+    border-radius: 10px;
+    position: relative;
+}
+
+.daySection {
+    font-size: 80px;
+    font-weight: 700;
+}
+
+.daySection .dayWeek {
+    font-size: 30px;
+    color: rgb(68, 68, 68);
+}
+
+.dots {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    top: 10px;
+}
+
+
+.calendar::before {
+    content: '';
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    background-color: rgb(185, 185, 185);
+    z-index: -99;
+    transform: translateY(10px);
+    border-radius: 10px;
+}
+
+.calendar::after {
+    content: '';
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 100%;
+    background-color: rgb(155, 155, 155);
+    z-index: -999;
+    transform: translateY(20px);
+    border-radius: 10px;
+}
+
+.monthSecion .d {
+    width: inherit;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.monthSecion .d span {
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: rgb(245, 245, 245);
+}

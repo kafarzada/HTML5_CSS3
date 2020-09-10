@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Kufam:ital,wght@0,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="calendar">
+        <div class="dots">
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+        <div class="paper">
+            <div class="monthSecion">
+                <p>Month</p>
+                <div class="d">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="daySection">
+              <p>Day</p>
+              <p class="dayWeek"></p>  
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const today = new Date();
+        const monthArr = [
+            'January','February','March','April','May','June','July', 'August','September','October','November','December'
+        ]
+        const daysArr = [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday",
+                "Sunday"
+          ]
+        document.querySelector('.daySection .dayWeek').innerHTML = daysArr[today.getDay() - 1]
+        document.querySelector('.daySection p').innerHTML = today.getDate();
+        document.querySelector('.monthSecion p').innerHTML = monthArr[today.getMonth()]
+    </script>
+</body>
+</html>
