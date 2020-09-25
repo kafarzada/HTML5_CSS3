@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>PASSWORD GENERATOR</h1>
+        </header>
+        <section>
+            <div class="dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="inp"><input id="passwordInp" readonly value="" type="text" placeholder="new password"><span>copy</span></div>
+            <a id="generateBtn" class="btn" href="#">generate password</a>
+        </section>
+        <footer>
+            <p>Created by Kafarzada</p>
+        </footer>
+        <div class="messageBox">
+            <p>Copied</p>
+        </div>
+    </div>
+
+    <script>
+        const generateBtn = document.getElementById('generateBtn');
+        const passwordInp = document.getElementById('passwordInp');
+        const copybtn = document.querySelector('.inp span');
+        const messageBox = document.querySelector('.messageBox');
+
+        generateBtn.addEventListener('click', () => {
+            passwordInp.value =  generatePassword(20).toString()
+        });
+
+        window.addEventListener('keyup', (e) => {
+            if(e.keyCode === 13) {
+                passwordInp.value =  generatePassword(20).toString()
+            }
+        })
+        
+    
+
+        copybtn.addEventListener('click', () => {
+            passwordInp.select(); 
+                passwordInp.setSelectionRange(0, 99999); 
+                document.execCommand("copy");
+                messageBox.classList.add('active');
+
+                setTimeout(() => messageBox.classList.remove('active'), 2000)
+        })
+        
+
+        function generatePassword(length) {
+            const chars = 'abcdefghijklmnopqrstuvwxyABCDEFGHIJKLMNOPQRSTUVWXY!@#$%^&*()_+/\|:;.,'
+            let newPass = '';
+            for(let i = 0; i < length; i++) {
+                newPass+= chars[Math.round( Math.random() * chars.length)]
+            }
+
+            return newPass
+        }
+
+    </script>
+</body>
+</html>

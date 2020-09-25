@@ -64,6 +64,7 @@ header.active span::after {
     top: -100%;
     left: -100%;
     transition: 0.3s ease-out;
+    border-radius: 50%;
 }
 
 

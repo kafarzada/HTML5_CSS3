@@ -1,0 +1,38 @@
+body {
+    background-color: darkorange;
+}
+
+.fill {
+    background-image: url('https://c7.hotpng.com/preview/266/86/384/smiley-emoticon-clip-art-mouth-smile-thumbnail.jpg');
+    position: relative;
+    height: 150px;
+    width: 150px;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.empty  {
+    width: 160px;
+    height: 160px;
+    display: inline-block;
+    margin: 5px;
+    border:4px solid saddlebrown;
+    background-image: white;
+}
+
+.hold {
+    border: 4px solid #ccc;
+}
+
+.hovered {
+    background:#f4f4f4;
+    border-style: dashed;
+}
+
+.invisible {
+    display: none;
+}
