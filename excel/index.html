@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.8/xlsx.min.js" integrity="sha512-8y82APPyIOwaBCEuQoZM4KdySliHcT2dQwZzkdOx7l2LfGS01ZvNg0A7PpplNTYN66tz7skkFr4rihZQhf9yGA==" crossorigin="anonymous"></script>
+    <script>
+        var wb = XLSX.readFile('Auto.xlsx')
+        var ws = wb.Sheets['Auto.BaseBuy.ru'];
+        let cars = []
+        var data = XLSX.utils.sheet_to_json(ws)
+
+
+        data.forEach(record => {
+            cars.push({
+                marka: record['Марка'],
+                model: record['Модель'],
+                height: record['Высота [мм]'],
+                widht: record['Ширина [мм]'],
+                length: record['Длина [мм]']
+            })
+        })
+    </script>
+
+</body>
+</html>

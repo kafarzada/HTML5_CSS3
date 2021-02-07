@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+    <title>Document</title>
+</head>
+<body class="">
+    <div class="modeBtn">
+        Ночной режим
+    </div>
+    <h1>Calculator</h1>
+    <div class="calculator">
+        <div class="view">
+        </div>
+        <div class="funtions"></div>
+        <div class="buttons">
+            <div class="row">
+                <div class="button clearbtn" onclick='document.querySelector(".view").innerHTML= ""'>C</div>
+                <div class="button" onclick='document.querySelector(".view").innerHTML+="("'>(</div>
+                <div class="button" onclick='document.querySelector(".view").innerHTML+=")"'>)</div>
+                <div class="button operation" onclick='document.querySelector(".view").innerHTML+="/"'>/</div>
+            </div>
+            <div class="row">
+                <div class="button" onclick='document.querySelector(".view").innerHTML+="7"'>7</div>
+                <div class="button" onclick='document.querySelector(".view").innerHTML+="8"'>8</div>
+                <div class="button" onclick='document.querySelector(".view").innerHTML+="9"'>9</div>
+                <div class="button operation" onclick='document.querySelector(".view").innerHTML+="*"'>*</div>
+            </div>
+            <div class="row">
+                <div class="button" onclick='document.querySelector(".view").innerHTML+="4"'>4</div>
+                <div class="button" onclick='document.querySelector(".view").innerHTML+="5"'>5</div>
+                <div class="button" onclick='document.querySelector(".view").innerHTML+="6"'>6</div>
+                <div class="button operation" onclick='document.querySelector(".view").innerHTML+="-"'>-</div>
+            </div>
+            <div class="row">
+                <div class="button" onclick='document.querySelector(".view").innerHTML+="1"'>1</div>
+                <div class="button" onclick='document.querySelector(".view").innerHTML+="2"'>2</div>
+                <div class="button" onclick='document.querySelector(".view").innerHTML+="3"'>3</div>
+                <div class="button operation" onclick='document.querySelector(".view").innerHTML+="+"'>+</div>
+            </div>
+            <div class="lastRow">
+                <div class="buttonZerro" onclick='document.querySelector(".view").innerHTML+="0"'>0</div>
+                <div class="button" onclick='document.querySelector(".view").innerHTML+="."'>.</div>
+                <div class="button equally" onclick='setResult()'>=</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function result() {
+            return eval(document.querySelector(".view").innerHTML)
+        }
+
+        function setResult() {
+            document.querySelector(".view").innerHTML = result() 
+        }
+
+        document.querySelector('.modeBtn').onclick = function() {
+            document.body.classList.toggle('lightMode')
+        }
+    </script>
+</body>
+</html>

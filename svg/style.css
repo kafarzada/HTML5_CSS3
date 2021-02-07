@@ -1,0 +1,82 @@
+body {
+    background-color: #0e0036;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+svg {
+        fill: transparent;
+        stroke: white;
+        width: 1021px;
+        height: 165px;
+        animation: a2 1s ease forwards 5s;
+        
+    }
+
+    svg path {
+        stroke-width: 4px;
+    }
+
+
+    svg path:nth-child(1) {
+        stroke-dasharray: 966;
+        stroke-dashoffset: 966;
+        animation: a1 2s ease forwards ;
+    }
+    
+
+    svg path:nth-child(2) {
+        stroke-dasharray: 795;
+        stroke-dashoffset: 795;
+        animation: a1 2s ease forwards 0.5s;
+    }
+    
+
+    svg path:nth-child(3) {
+        stroke-dasharray: 846;
+        stroke-dashoffset: 846;
+        animation: a1 2s ease forwards 1s;
+    }
+    
+
+    svg path:nth-child(4) {
+        stroke-dasharray: 360;
+        stroke-dashoffset: 360;
+        animation: a1 2s ease forwards 1.5s;
+    }
+    
+
+    svg path:nth-child(5) {
+        stroke-dasharray: 1274;
+        stroke-dashoffset: 1274;
+        animation: a1 2s ease forwards 2s;
+    }
+    
+
+    svg path:nth-child(6) {
+        stroke-dasharray: 880;
+        stroke-dashoffset: 880;
+        animation: a1 2s ease forwards 2.5s;
+    }
+    
+    svg path:nth-child(7) {
+        stroke-dasharray: 706;
+        stroke-dashoffset: 706;
+        animation: a1 2s ease forwards 2.9s;
+    }
+    
+
+
+    @keyframes a1 {
+        to {
+            stroke-dashoffset: 0;
+        }
+    }
+
+    @keyframes a2 {
+        to {
+            fill: #ffffff;
+        }
+    }

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HTML, CSS and JavaScript demo</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Start your code here -->
+  <div class="page">
+    <div class="bg" id="bg"></div>
+    <ul class="nav ">
+      <li class="nav__item">
+          <a href="#" class="nav__link">Главная</a>
+      </li>
+            <li class="nav__item">
+          <a href="#" class="nav__link">Книги</a>
+      </li>
+            <li class="nav__item">
+          <a href="#" class="nav__link">Популярные</a>
+      </li>
+            <li class="nav__item">
+            <a href="#" class="nav__link">FAG</a>
+      </li>
+    </ul>
+    <div class="wrapper">
+      <div class="burger">
+        <span></span>
+      </div>
+      <header>
+          <h1>Parallax Effect</h1>
+        <div class="content">
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione accusantium eos beatae dicta perferendis debitis sunt. Fugiat a nostrum ex fuga veniam inventore ducimus earum animi dolor delectus. Expedita excepturi.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos pariatur voluptate natus porro sint eum possimus fugiat necessitatibus delectus neque nobis facere quaerat repudiandae veritatis modi dolor aspernatur eius perferendis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero ducimus tempore assumenda distinctio nulla voluptatibus fuga illo cupiditate beatae quo totam ipsum vel ex debitis accusantium quam accusamus similique architecto.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos pariatur voluptate natus porro sint eum possimus fugiat necessitatibus delectus neque nobis facere quaerat repudiandae veritatis modi dolor aspernatur eius perferendis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero ducimus tempore assumenda distinctio nulla voluptatibus fuga illo cupiditate beatae quo totam ipsum vel ex debitis accusantium quam accusamus similique architecto.</p>          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos pariatur voluptate natus porro sint eum possimus fugiat necessitatibus delectus neque nobis facere quaerat repudiandae veritatis modi dolor aspernatur eius perferendis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero ducimus tempore assumenda distinctio nulla voluptatibus fuga illo cupiditate beatae quo totam ipsum vel ex debitis accusantium quam accusamus similique architecto.</p>          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos pariatur voluptate natus porro sint eum possimus fugiat necessitatibus delectus neque nobis facere quaerat repudiandae veritatis modi dolor aspernatur eius perferendis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero ducimus tempore assumenda distinctio nulla voluptatibus fuga illo cupiditate beatae quo totam ipsum vel ex debitis accusantium quam accusamus similique architecto.</p>          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos pariatur voluptate natus porro sint eum possimus fugiat necessitatibus delectus neque nobis facere quaerat repudiandae veritatis modi dolor aspernatur eius perferendis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero ducimus tempore assumenda distinctio nulla voluptatibus fuga illo cupiditate beatae quo totam ipsum vel ex debitis accusantium quam accusamus similique architecto.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos pariatur voluptate natus porro sint eum possimus fugiat necessitatibus delectus neque nobis facere quaerat repudiandae veritatis modi dolor aspernatur eius perferendis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero ducimus tempore assumenda distinctio nulla voluptatibus fuga illo cupiditate beatae quo totam ipsum vel ex debitis accusantium quam accusamus similique architecto.</p>
+          
+        </div>
+      </header>
+    </div>    
+  </div>
+
+    <script>
+        // Write JavaScript here 
+
+
+            $(document).ready(function(){
+            document.addEventListener("mousemove", function(e) {
+                const bg = document.getElementById("bg")
+            bg.style.transform = ` scale(1.1, 1.1) translate(${-e.clientX * 1.8 / 100}px, ${-e.clientY * 1.8 / 100}px)`
+            })
+            })
+
+            
+            $(".burger").click(function() {
+                $(".nav").toggleClass("active")
+                $("body").toggleClass("lock")
+                    $(".burger").toggleClass("active")
+            })
+    </script>
+<!-- End your code here -->
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            position: relative;
+            min-height: 100vh;
+            background-color: rgb(27, 23, 29);
+        }
+
+        .clip {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1em;
+        }
+
+        .autumn {
+            background-image: url(https://www.itl.cat/pngfile/big/40-404089_nature-wallpaper-autumn-free-1-photo-autumn-wallpaper.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            
+        }
+
+        .winter {
+            background-image: url(https://wallpaperaccess.com/full/1636513.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0% 100%);
+            transition: .5s;
+        }
+
+        .winter:hover {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        }
+
+        .autumn:hover ~ .winter {
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        }
+
+        .autumn .title {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="clip autumn">
+            <h1 class="title">HOVER EFFECT</h1>
+        </div>
+        <div class="clip winter">
+            <h1 class="title">HOVER EFFECT</h1>
+        </div>
+    </header>
+</body>
+</html>

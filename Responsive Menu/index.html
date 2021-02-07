@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="header__inner">
+                <div class="burger">
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <nav>
+            <div class="nav__inner">
+                <div class="column">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#" class="nav__link active" data-clr="#727a7d" data-bg="https://images.unsplash.com/photo-1612612822007-177f2232a0cb?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80">Главная</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link" data-clr="#ddb887" data-bg="https://images.unsplash.com/photo-1612599801043-b11d4edb2d87?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80">Услуги</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link" data-clr="#54171c" data-bg="https://images.unsplash.com/photo-1612549672719-2f1a3908ae31?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80">Портфолио</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link" data-clr="#7f5745" data-bg="https://images.unsplash.com/photo-1612518225862-f11ba75b6b31?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80">Команда</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link" data-clr="#203a36" data-bg="https://images.unsplash.com/photo-1612440455990-785cd7ac50ef?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80">О Нас</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link" data-clr="#7f5650" data-bg="https://images.unsplash.com/photo-1612387871638-ee6244f3e518?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="column bg">
+                    <div class="img">
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <script>
+
+        const image = $(".img")
+        const navWrapp = $(".column:first-child")
+    
+
+        $(document).ready(function() {
+            $(".nav__link").each(function(index, item) {
+                if($(item).hasClass("active")) {
+                    $(".bg").css("backgroundImage", `url(${$(this).attr("data-bg")})`)
+                    navWrapp.css("background", $(this).attr("data-clr"))
+                    console.log($(item).attr("data-clr"));
+                }
+            })
+        })
+
+
+        $(".nav__link").hover(function() {
+
+            
+            $(".nav__link").each(function(index, item) {
+                $(item).removeClass("active")
+            })
+
+            $(this).addClass("active")
+            image.css("backgroundImage", `url(${$(this).attr("data-bg")})`)
+            navWrapp.css("background", $(this).attr("data-clr"))
+            
+        })
+
+        $(".burger").click(function() {
+            $("nav").toggleClass("active")
+        })
+    </script>
+</body>
+</html>
+
+<!-- https://images.unsplash.com/photo-1612612822007-177f2232a0cb?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80 -->
+<!-- https://images.unsplash.com/photo-1612599801043-b11d4edb2d87?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80 -->
+<!-- https://images.unsplash.com/photo-1612549672719-2f1a3908ae31?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80 -->
+<!-- https://images.unsplash.com/photo-1612518225862-f11ba75b6b31?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80 -->
+<!-- https://images.unsplash.com/photo-1612440455990-785cd7ac50ef?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80 -->
+<!-- https://images.unsplash.com/photo-1612387871638-ee6244f3e518?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80 -->
